@@ -1,10 +1,19 @@
 import GamesUI.*;
 
 public class Main {
+    // UTILITIES
+    private MainMenu mainMenuFrame;
 
+    // CONSTRUCTOR
+    public Main() {
+        this.mainMenuFrame = new MainMenu();
+    }
+
+    // MAIN PROGRAM
     public static void main(String[] args)
     {
-        MainMenu menu = new MainMenu();
+        Main program = new Main();
+        program.mainMenuFrame.displayMainFrame();
 
 
 
