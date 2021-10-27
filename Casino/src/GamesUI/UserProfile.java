@@ -5,37 +5,36 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserProfile extends JFrame{
+public class UserProfile {
     private JButton button1;
     private JPanel UserPannel;
+    private JFrame userProfileFrame;
 
-    JFrame userFrame = new JFrame("LoginFrame");
+    private MainMenu mainMenuframe;
 
-    public UserProfile(){
-        userFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        userFrame.setSize(450,450);
-        userFrame.setContentPane(new UserProfile().UserPannel);
-        userFrame.add(UserPannel);
-        userFrame.setVisible(true);
-        userFrame.pack();
-        userFrame.setVisible(true);
-        userFrame.setResizable(false);
+    public UserProfile(MainMenu mainMenuframe) {
+        this.userProfileFrame = new JFrame("User Frame");
+        this.mainMenuframe = mainMenuframe;
 
-    }
-
-
-
-    /*
-    public UserProfile(){
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new MainMenu().setVisible(true);
-
+                mainMenuframe.displayMainFrame();
+                userProfileFrame.setVisible(false);
             }
         });
+
     }
-     */
+
+    public void displayMainFrame(){
+        userProfileFrame.setContentPane(this.UserPannel);
+        userProfileFrame.setSize(400,400);
+        userProfileFrame.setVisible(true);
+    }
+
+    public JPanel getUserPannel() { return UserPannel; }
+
+
 
     // EOF
 }
