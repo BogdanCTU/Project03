@@ -1,5 +1,7 @@
 package GamesUI;
 
+import GamesUI.HorseRacing.HorseRacingUI;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,10 +16,12 @@ public class MainMenu {
     private JButton game1Button;
 
     private UserProfile userProfileForm;
+    private HorseRacingUI horseRacingForm;
 
     public MainMenu() {
         this.mainMenuJFrame = new JFrame("Main Frame");
         this.userProfileForm = new UserProfile(this);
+        this.horseRacingForm = new HorseRacingUI(this);
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -27,6 +31,16 @@ public class MainMenu {
 
             }
         });
+
+        game1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                horseRacingForm.displayMainFrame();
+                mainMenuJFrame.setVisible(false);
+
+            }
+        });
+
 
     }
 
