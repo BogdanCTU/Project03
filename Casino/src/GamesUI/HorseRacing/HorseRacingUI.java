@@ -30,6 +30,12 @@ public class HorseRacingUI {
             }
         });
 
+        //cod silviu
+
+
+
+
+        //sfarsit cod silviu
     }
 
     // METHODS
@@ -40,6 +46,9 @@ public class HorseRacingUI {
     }
 
     public JPanel getHorsePannel() { return HRPanel; }
+
+    //cod silviu
+
 
     //EOF - end of file
 }
