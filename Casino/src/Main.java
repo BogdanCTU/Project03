@@ -1,13 +1,10 @@
-import GamesUI.MainMenu;
-import GamesUI.UserProfile;
-
-import javax.swing.*;
+import GamesUI.*;
 
 public class Main {
 
     public static void main(String[] args)
     {
-        MainMenu mainMenuFrame = new MainMenu();
+        MainMenu menu = new MainMenu();
 
 
 
