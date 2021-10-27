@@ -27,6 +27,12 @@ public class FortuneWheelUI {
             }
         });
 
+        // COD IOANA
+
+
+
+
+        //SFARSIT COD IOANA
     }
 
     // METHODS
@@ -37,6 +43,12 @@ public class FortuneWheelUI {
     }
 
     public JPanel getFWPanel() { return FWPanel; }
+
+    // COD IOANA
+    // aici sunt operatile mele
+
+
+
 
     //EOF - end of file
 }
