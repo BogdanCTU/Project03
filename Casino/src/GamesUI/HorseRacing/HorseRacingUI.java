@@ -13,6 +13,10 @@ public class HorseRacingUI {
     // UTILITIES
     private JButton backMenuButton;
     private JPanel HRPanel;
+    private JButton a4HorsesButton;
+    private JButton a2HorsesButton;
+    private JButton infoButton;
+    private JButton backLabelButton;
     private JFrame horseRacingFrame;
 
     private MainMenu mainMenuframe;
@@ -31,11 +35,17 @@ public class HorseRacingUI {
         });
 
         //cod silviu
+        infoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+            }
+        });
 
 
 
         //sfarsit cod silviu
+
     }
 
     // METHODS
