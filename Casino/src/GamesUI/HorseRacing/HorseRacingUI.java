@@ -13,10 +13,7 @@ public class HorseRacingUI {
     // UTILITIES
     private JButton backMenuButton;
     private JPanel HRPanel;
-    private JButton a4HorsesButton;
-    private JButton a2HorsesButton;
     private JButton infoButton;
-    private JButton backLabelButton;
     private JFrame horseRacingFrame;
 
     private MainMenu mainMenuframe;
