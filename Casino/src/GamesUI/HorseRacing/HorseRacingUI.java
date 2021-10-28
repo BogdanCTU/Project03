@@ -13,7 +13,7 @@ public class HorseRacingUI {
     // UTILITIES
     private JButton backMenuButton;
     private JPanel HRPanel;
-    private JButton infoButton;
+
     private JFrame horseRacingFrame;
 
     private MainMenu mainMenuframe;
@@ -32,12 +32,6 @@ public class HorseRacingUI {
         });
 
         //cod silviu
-        infoButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
 
 
 
