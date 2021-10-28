@@ -17,7 +17,7 @@ public class HorseRacingUI {
     private JFrame horseRacingFrame;
 
     private MainMenu mainMenuframe;
-
+//sarutmana
     // CONSTRUCTOR
     public HorseRacingUI(MainMenu mainMenuframe) {
         this.horseRacingFrame = new JFrame("User Frame");
