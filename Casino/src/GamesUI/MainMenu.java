@@ -90,7 +90,7 @@ public class MainMenu {
     // FRAMES METHODS
     public void displayMainFrame(){
         mainMenuJFrame.setContentPane(this.MainM);
-        mainMenuJFrame.setSize(400,400);
+        mainMenuJFrame.setSize(450,450);
         mainMenuJFrame.setVisible(true);
     }
 
