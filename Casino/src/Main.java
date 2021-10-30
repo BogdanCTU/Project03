@@ -1,4 +1,5 @@
 import GamesUI.*;
+import Utilities.User;
 
 public class Main {
     // UTILITIES
