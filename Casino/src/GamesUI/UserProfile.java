@@ -1,12 +1,12 @@
 package GamesUI;
 
 import Utilities.User;
-import GamesUI.MainMenu;
-import com.sun.tools.javac.Main;
+import FileDataSave.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class UserProfile {
     private JButton backButton;
@@ -57,6 +57,11 @@ public class UserProfile {
                 userNameLabel.setText("User name: " + User.casinoUser.getUserName());
                 userMoneyLabel.setText("User name: " + User.userMoney);
                 UserImageFinal.setIcon(User.casinoUser.getUserIcon());
+                try {
+                    SerializaUser.serializaUser();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
             }
         });
 

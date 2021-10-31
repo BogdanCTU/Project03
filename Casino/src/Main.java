@@ -1,5 +1,8 @@
 import GamesUI.*;
-import Utilities.User;
+import Utilities.*;
+import FileDataSave.*;
+
+import java.io.IOException;
 
 public class Main {
     // UTILITIES
@@ -11,8 +14,9 @@ public class Main {
     }
 
     // MAIN PROGRAM
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
+        if(User.casinoUser.getUserIcon() == null && User.casinoUser.getUserName() == null) DeserializeUser.deserializaUser();
+
         Main program = new Main();
         program.mainMenuFrame.displayMainFrame();
 

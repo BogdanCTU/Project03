@@ -1,8 +1,9 @@
 package Utilities;
 
 import javax.swing.*;
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable {
     // VARIABLES
     private String userName;
     public Icon userIcon;
