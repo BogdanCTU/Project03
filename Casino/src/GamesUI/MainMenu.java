@@ -38,7 +38,7 @@ public class MainMenu {
         game1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                horseRacingForm.displayMainFrame();
+                horseRacingForm.displayHRFrame();
                 mainMenuJFrame.setVisible(false);
 
             }

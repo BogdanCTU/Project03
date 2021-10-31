@@ -13,15 +13,23 @@ public class HorseRacingUI {
     // UTILITIES
     private JButton backMenuButton;
     private JPanel HRPanel;
+    private JButton userImage;
+    private JLabel userLabel;
+    private JButton twoHorseRaceButton;
+    private JButton hsInfoButton;
+    private JButton fourHorseRaceButton;
+    private JLabel horseTitle;
 
     private JFrame horseRacingFrame;
-
+    private HorseRacingInfo hsInfoFrame;
     private MainMenu mainMenuframe;
-//sarutmana
+
+    //sarutmana
     // CONSTRUCTOR
     public HorseRacingUI(MainMenu mainMenuframe) {
         this.horseRacingFrame = new JFrame("User Frame");
         this.mainMenuframe = mainMenuframe;
+        this.hsInfoFrame=new HorseRacingInfo(this);
 
         backMenuButton.addActionListener(new ActionListener() {
             @Override
@@ -34,22 +42,28 @@ public class HorseRacingUI {
         //cod silviu
 
 
-
-        //sfarsit cod silviu
-
+        hsInfoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                hsInfoFrame.displayHsInfoFrame();
+                horseRacingFrame.setVisible(false);
+            }
+        });
+        //sf cod silviu
     }
 
     // METHODS
-    public void displayMainFrame(){
+    public void displayHRFrame(){
         horseRacingFrame.setContentPane(this.HRPanel);
-        horseRacingFrame.setSize(400,400);
+        horseRacingFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        horseRacingFrame.setResizable(false);
+        //horseRacingFrame.setSize(400,400);
         horseRacingFrame.setVisible(true);
     }
 
     public JPanel getHorsePannel() { return HRPanel; }
 
     //cod silviu
-
 
     //EOF - end of file
 }

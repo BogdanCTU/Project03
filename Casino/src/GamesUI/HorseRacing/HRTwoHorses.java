@@ -1,2 +1,4 @@
-package GamesUI.HorseRacing;public class HRTwoHorses {
+package GamesUI.HorseRacing;
+
+public class HRTwoHorses {
 }
