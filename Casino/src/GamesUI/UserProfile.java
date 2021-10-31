@@ -1,23 +1,32 @@
 package GamesUI;
 
+import Utilities.User;
+import FileDataSave.*;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class UserProfile {
-    private JButton button1;
+    private JButton backButton;
     private JPanel UserPannel;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
-    private JButton button6;
-    private JButton button7;
-    private JButton button8;
-    private JButton button9;
-    private JButton button10;
-    private JButton button11;
+    private JPanel UserSettingsPannel;
+    private JPanel UserImagesPannel;
+    private JButton image_1_Button;
+    private JButton image_3_Button;
+    private JButton saveImageButton;
+    private JButton image_2_Button;
+    private JButton image_4_Button;
+    private JPanel UserPannelFinal;
+    private JTextField nameTextField;
+    private JButton selectImageButton;
+    private JButton UserImageFinal;
+    private JButton editProfileButton;
+    private JLabel userMoneyLabel;
+    private JLabel userNameLabel;
+    private JButton saveUserButton;
+    private JButton userSavedImage;
     private JFrame userProfileFrame;
 
     private MainMenu mainMenuframe;
@@ -26,13 +35,93 @@ public class UserProfile {
         this.userProfileFrame = new JFrame("User Frame");
         this.mainMenuframe = mainMenuframe;
 
-        button1.addActionListener(new ActionListener() {
+        backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mainMenuframe.displayMainFrame();
                 userProfileFrame.setVisible(false);
+                //MainMenu.userNameLabelMenu.setText("User: " + User.casinoUser.getUserName());
             }
         });
+
+        saveUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //this pannel
+                UserSettingsPannel.setVisible(false);
+                User.casinoUser.setUserName(nameTextField.getText());
+                User.casinoUser.setUserIcon(userSavedImage.getIcon());
+
+                //other pannel
+                UserPannelFinal.setVisible(true);
+                userNameLabel.setText("User name: " + User.casinoUser.getUserName());
+                userMoneyLabel.setText("User name: " + User.userMoney);
+                UserImageFinal.setIcon(User.casinoUser.getUserIcon());
+                try {
+                    SerializaUser.serializaUser();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        editProfileButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserSettingsPannel.setVisible(true);
+                UserPannelFinal.setVisible(false);
+            }
+        });
+
+        image_1_Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //this pannel
+                userSavedImage.setIcon(image_1_Button.getIcon());
+            }
+        });
+
+        image_2_Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //this pannel
+                userSavedImage.setIcon(image_2_Button.getIcon());
+            }
+        });
+
+        image_3_Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //this pannel
+                userSavedImage.setIcon(image_3_Button.getIcon());
+            }
+        });
+
+        image_4_Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //this pannel
+                userSavedImage.setIcon(image_4_Button.getIcon());
+            }
+        });
+
+        saveImageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserImagesPannel.setVisible(false);
+                UserSettingsPannel.setVisible(true);
+            }
+        });
+
+        selectImageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserImagesPannel.setVisible(true);
+                UserSettingsPannel.setVisible(false);
+            }
+        });
+
+
 
     }
 
@@ -43,8 +132,6 @@ public class UserProfile {
     }
 
     public JPanel getUserPannel() { return UserPannel; }
-
-
 
     // EOF
 }

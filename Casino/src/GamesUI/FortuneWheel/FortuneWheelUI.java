@@ -1,6 +1,7 @@
 package GamesUI.FortuneWheel;
 
 import GamesUI.MainMenu;
+import Utilities.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -10,6 +11,9 @@ public class FortuneWheelUI {
     // UTILITIES
     private JButton backMenuButton;
     private JPanel FWPanel;
+    private JButton UserImageFW;
+    private JLabel UserLabelFW;
+    private JButton refreshButton;
     private JFrame fortuneWheelFrame;
 
     private MainMenu mainMenuframe;
@@ -24,6 +28,14 @@ public class FortuneWheelUI {
             public void actionPerformed(ActionEvent e) {
                 mainMenuframe.displayMainFrame();
                 fortuneWheelFrame.setVisible(false);
+            }
+        });
+
+        refreshButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(User.casinoUser.getUserName() != null) UserLabelFW.setText("User: " + User.casinoUser.getUserName() + " / Currency: " + User.userMoney);
+                if(User.casinoUser.getUserIcon() != null) UserImageFW.setIcon(User.casinoUser.getUserIcon());
             }
         });
 
