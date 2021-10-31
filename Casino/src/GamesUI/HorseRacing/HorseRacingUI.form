@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GamesUI.HorseRacing.HorseRacingUI">
-  <grid id="27dc6" binding="HRPanel" layout-manager="GridLayoutManager" row-count="7" column-count="15" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="HRPanel" layout-manager="GridLayoutManager" row-count="7" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="1" left="1" bottom="1" right="1"/>
     <constraints>
       <xy x="3" y="1" width="1422" height="482"/>
     </constraints>
     <properties>
+      <alignmentY value="0.3"/>
+      <focusable value="false"/>
       <maximumSize width="300" height="300"/>
       <minimumSize width="300" height="300"/>
+      <opaque value="true"/>
       <preferredSize width="300" height="300"/>
       <visible value="true"/>
     </properties>
-    <border type="none"/>
+    <border type="line">
+      <color color="-13486598"/>
+    </border>
     <children>
-      <component id="a82c2" class="javax.swing.JButton" binding="backMenuButton">
-        <constraints>
-          <grid row="0" column="0" row-span="7" col-span="6" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Back Button"/>
-        </properties>
-      </component>
       <component id="3c8c6" class="javax.swing.JButton" binding="userImage">
         <constraints>
-          <grid row="0" column="13" row-span="7" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="8" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Button"/>
@@ -31,7 +28,7 @@
       </component>
       <component id="1351a" class="javax.swing.JLabel" binding="userLabel">
         <constraints>
-          <grid row="0" column="14" row-span="7" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="9" row-span="7" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -42,86 +39,190 @@
       </component>
       <component id="f6b53" class="javax.swing.JButton" binding="horse4Button">
         <constraints>
-          <grid row="5" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="7" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4347885"/>
+          <font name="Algerian"/>
+          <foreground color="-1696728"/>
           <text value="Horse-4"/>
-        </properties>
-      </component>
-      <component id="a31f6" class="javax.swing.JLabel" binding="horseTitle">
-        <constraints>
-          <grid row="0" column="8" row-span="3" col-span="5" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Welcome to horse racing!"/>
-        </properties>
-      </component>
-      <component id="34c41" class="javax.swing.JButton" binding="hsInfoButton">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Horse Race Info"/>
         </properties>
       </component>
       <component id="4a3d9" class="javax.swing.JButton" binding="horse2Button">
         <constraints>
-          <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4347885"/>
+          <font name="Algerian"/>
+          <foreground color="-1696728"/>
           <text value="Horse-2"/>
         </properties>
       </component>
       <component id="223cf" class="javax.swing.JButton" binding="horse3Button" default-binding="true">
         <constraints>
-          <grid row="5" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="5" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-4347885"/>
+          <font name="Algerian"/>
+          <foreground color="-1696728"/>
           <text value="Horse-3"/>
         </properties>
       </component>
       <component id="6df0e" class="javax.swing.JButton" binding="horse1Button" default-binding="true">
         <constraints>
-          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="12" height="30"/>
+          </grid>
         </constraints>
         <properties>
+          <background color="-4347885"/>
+          <font name="Algerian"/>
+          <foreground color="-1696728"/>
           <text value="Horse-1"/>
         </properties>
       </component>
       <component id="32222" class="javax.swing.JButton" binding="bet50">
         <constraints>
-          <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Bet 50"/>
+          <background color="-4347885"/>
+          <font name="Algerian"/>
+          <foreground color="-16711915"/>
+          <text value="Bet 50$"/>
         </properties>
       </component>
       <component id="bec69" class="javax.swing.JButton" binding="bet100">
         <constraints>
-          <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Bet 100"/>
+          <background color="-4347885"/>
+          <font name="Algerian"/>
+          <foreground color="-16711915"/>
+          <text value="Bet 100$"/>
         </properties>
       </component>
       <component id="fb6cc" class="javax.swing.JButton" binding="bet200">
         <constraints>
-          <grid row="5" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="6" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Bet 500"/>
+          <background color="-4347885"/>
+          <focusCycleRoot value="false"/>
+          <focusPainted value="false"/>
+          <focusable value="true"/>
+          <font name="Algerian"/>
+          <foreground color="-16711915"/>
+          <text value="Bet 500$"/>
         </properties>
       </component>
       <component id="a38bd" class="javax.swing.JLabel" binding="labelPic">
         <constraints>
-          <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="200" height="200"/>
-            <preferred-size width="200" height="200"/>
+            <preferred-size width="200" height="212"/>
             <maximum-size width="500" height="1000"/>
           </grid>
         </constraints>
         <properties>
           <text value="Label"/>
+        </properties>
+      </component>
+      <component id="a31f6" class="javax.swing.JLabel" binding="horseTitle">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="286" height="212"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1696728"/>
+          <font name="Algerian" size="24"/>
+          <foreground color="-14559258"/>
+          <opaque value="false"/>
+          <text value="Choose your contestant:"/>
+          <verifyInputWhenFocusTarget value="false"/>
+        </properties>
+      </component>
+      <component id="7f275" class="javax.swing.JLabel" binding="yourBetField">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="18"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="12"/>
+          <foreground color="-14559258"/>
+          <text value="Your bet:0"/>
+          <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <component id="a82c2" class="javax.swing.JButton" binding="backMenuButton">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Back Button"/>
+        </properties>
+      </component>
+      <component id="8bcea" class="javax.swing.JLabel" binding="horseChoseField">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <focusable value="true"/>
+          <font name="Arial Black" size="11"/>
+          <foreground color="-14559258"/>
+          <inheritsPopupMenu value="true"/>
+          <text value="Horse chosen:"/>
+          <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <component id="e5fc2" class="javax.swing.JButton" binding="startRaceButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Brush Script MT" size="20"/>
+          <text value="Start Race"/>
+        </properties>
+      </component>
+      <component id="be874" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Britannic Bold" style="0"/>
+          <foreground color="-4517858"/>
+          <text value="Label"/>
+          <visible value="false"/>
+        </properties>
+      </component>
+      <component id="5f140" class="javax.swing.JLabel" binding="horseNameField">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Baskerville Old Face" size="22"/>
+          <foreground color="-14559258"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <component id="34c41" class="javax.swing.JButton" binding="hsInfoButton">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="169" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Blackadder ITC" size="20"/>
+          <text value="Horse Race Info"/>
         </properties>
       </component>
     </children>
