@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 public class SerializaUser {
     public static void serializaUser () throws IOException {
         try {
-            FileOutputStream fileOutput = new FileOutputStream("C:\\Users\\bctod\\Desktop\\Proiect_03\\Casino\\src\\FileDataSave\\dataSave");
+            FileOutputStream fileOutput = new FileOutputStream("C:\\Users\\tarca\\OneDrive\\Desktop\\Projects\\Casino\\src\\FileDataSave\\dataSave");
             ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
 
             objectOutput.writeObject(User.casinoUser);

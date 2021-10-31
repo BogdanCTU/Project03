@@ -6,7 +6,7 @@ import java.io.*;
 public class DeserializeUser {
     public static void deserializaUser () throws IOException {
         try {
-            FileInputStream fileInput = new FileInputStream("C:\\Users\\bctod\\Desktop\\Proiect_03\\Casino\\src\\FileDataSave\\dataSave");
+            FileInputStream fileInput = new FileInputStream("C:\\Users\\tarca\\OneDrive\\Desktop\\Projects\\Casino\\src\\FileDataSave\\dataSave");
             ObjectInputStream objectInput = new ObjectInputStream(fileInput);
 
             User.casinoUser = (User)objectInput.readObject();
