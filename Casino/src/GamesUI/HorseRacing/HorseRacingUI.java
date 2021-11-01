@@ -11,16 +11,16 @@ import java.util.Random;
 
 public class HorseRacingUI{
     // UTILITIES
-    ImageIcon imageDiego=new ImageIcon("C:\\Users\\tarca\\OneDrive\\Desktop\\Projects\\Casino\\src\\GamesUI\\HorseRacing\\Images\\400px-Diego_Brando_Infobox_Manga.png");
-    ImageIcon imageGyro=new ImageIcon("C:\\Users\\tarca\\OneDrive\\Desktop\\Projects\\Casino\\src\\GamesUI\\HorseRacing\\Images\\pngkey.com-gyro-png-737618.png");
+    ImageIcon imageDiego=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//400px-Diego_Brando_Infobox_Manga.png");
+    ImageIcon imageGyro=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//pngkey.com-gyro-png-737618.png");
     ImageIcon imageJohnny=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//Johnny_Joestar_Infobox_Manga.png");
-    ImageIcon imageHotPants=new ImageIcon("C:\\Users\\tarca\\OneDrive\\Desktop\\Projects\\Casino\\src\\GamesUI\\HorseRacing\\Images\\PngItem_2830700.png");
+    ImageIcon imageHotPants=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//PngItem_2830700.png");
     ImageIcon backGround=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//6tuy8e10bg251.jpg");
 
-    protected int winner=0;
+    public int winner=0;
     protected int bChoise=0;
     protected int bet=0;
-    Random rand;
+    Random rand=new Random();
     private JButton backMenuButton;
     private JPanel HRPanel;
     private JButton userImage;
@@ -40,6 +40,7 @@ public class HorseRacingUI{
     private JLabel horseChoseField;
     private JLabel horseNameField;
     private JLabel warnLabel;
+    private JButton refreshButton;
     private JFrame horseRacingFrame;
     private RaceResults raceResults=new RaceResults(this);
     private HorseRacingInfo hsInfoFrame;
@@ -55,7 +56,7 @@ public class HorseRacingUI{
         this.labelPic.setSize(500,800);
         this.labelPic.setText("");
        // this.labelPic.setIcon(imageScale(this.imageDiego,labelPic));
-        this.rand=new Random();
+
         this.HRPanel.setSize(1920,1080);
         this.HRPanel.setOpaque(false);
         this.backgroundLabel=new JLabel();
@@ -65,7 +66,7 @@ public class HorseRacingUI{
         this.contentPanel.setSize(1920,1040);
         this.contentPanel.add(HRPanel);
         this.contentPanel.add(backgroundLabel);
-        this.horseChoseField.setText("");
+
         backMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -133,9 +134,13 @@ public class HorseRacingUI{
                     warnLabel.setText("Pls choose an horse!");
                 }
                 else {
+
                     raceResults.displayResultsFrame();
+                    winnerRandomizer(raceResults.winner);
                     horseRacingFrame.setVisible(false);
                     warnLabel.setText("");
+                    resetFrame();
+
                 }
                 }
         });
@@ -160,6 +165,12 @@ public class HorseRacingUI{
                 bet=200;
             }
         });
+        refreshButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resetFrame();
+            }
+        });
     }
 
     // METHODS
@@ -173,8 +184,18 @@ public class HorseRacingUI{
 
     public JPanel getHorsePannel() { return HRPanel; }
 
-    public void winnerRandomizer(){
-    winner=rand.nextInt(1,4);
+    public void resetFrame(){
+
+        this.bChoise=0;
+        this.bet=0;
+        this.labelPic.setIcon(null);
+        this.horseNameField.setText(" ");
+        this.yourBetField.setText("Your bet:0");
+        this.horseChoseField.setText("Horse chosen:");
+        //winnerRandomizer();
+    }
+    public void winnerRandomizer(int var){
+    var=this.rand.nextInt(3);
     }
     public ImageIcon imageScale(ImageIcon image,JLabel label){
       Image img=image.getImage();

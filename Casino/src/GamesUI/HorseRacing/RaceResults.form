@@ -50,6 +50,7 @@
           <font name="Bookman Old Style" size="28" style="1"/>
           <foreground color="-1696728"/>
           <text value="You lose!"/>
+          <visible value="false"/>
         </properties>
       </component>
       <component id="47b57" class="javax.swing.JLabel" binding="winLabel">
@@ -60,6 +61,7 @@
           <font name="Bookman Old Style" size="28" style="1"/>
           <foreground color="-14549201"/>
           <text value="You win!"/>
+          <visible value="false"/>
         </properties>
       </component>
       <component id="94b10" class="javax.swing.JLabel" binding="winLabelPic">
@@ -72,7 +74,11 @@
       </component>
       <component id="7c7c1" class="javax.swing.JLabel" binding="labelPic">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="200"/>
+            <preferred-size width="350" height="400"/>
+            <maximum-size width="500" height="1000"/>
+          </grid>
         </constraints>
         <properties>
           <text value="Label"/>
