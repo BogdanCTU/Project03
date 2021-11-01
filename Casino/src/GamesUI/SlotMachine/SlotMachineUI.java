@@ -108,6 +108,10 @@ public class SlotMachineUI {
         slotMachineFrame.setVisible(true);
     }
 
+
+    //path relativ pentru carti
+    //cauta
+
     public void slotMachine(){
         if(currentBet == 50){
             //a

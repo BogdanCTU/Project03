@@ -7,7 +7,8 @@ public class Deck {
     // CARDS
 
     //CUORI - c
-    static Icon ic1 = new ImageIcon("C:\\Users\\bctod\\Desktop\\Programare Obiect\\Project_02\\Project_02_Sim\\src\\gameoflife\\cards\\c1.png");
+    //Casino//src//CardsPackage//0.png
+    static Icon ic1 = new ImageIcon("Casino//src//CardsPackage//c1.png");
     static Card c1 = new Card('c', 1, 11, ic1);
     static Icon ic2 = new ImageIcon("C:\\Users\\bctod\\Desktop\\Programare Obiect\\Project_02\\Project_02_Sim\\src\\gameoflife\\cards\\c2.png");
     static Card c2 = new Card('c', 2, 0, ic2);
