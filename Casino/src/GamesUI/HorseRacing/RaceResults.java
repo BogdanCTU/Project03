@@ -15,7 +15,7 @@ public class RaceResults extends JFrame{
     ImageIcon lsoePic=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//unnamed.png");
    //
     public int winner=4;
-    Random rnd;
+    Random rnd=new Random();
     //
     private JPanel HRResults;
     private JButton backButton;
@@ -70,6 +70,7 @@ public class RaceResults extends JFrame{
         });
     }
     public void displayResultsFrame(){
+        this.winner=rnd.nextInt(3);
         hrResults.setContentPane(this.contentPanel);
         hrResults.setExtendedState(JFrame.MAXIMIZED_BOTH);
         hrResults.setResizable(false);
