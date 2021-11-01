@@ -136,7 +136,6 @@ public class HorseRacingUI{
                 else {
 
                     raceResults.displayResultsFrame();
-                    winnerRandomizer(raceResults.winner);
                     horseRacingFrame.setVisible(false);
                     warnLabel.setText("");
                     resetFrame();

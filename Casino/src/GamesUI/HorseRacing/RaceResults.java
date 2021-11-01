@@ -12,7 +12,7 @@ public class RaceResults extends JFrame{
     ImageIcon winnerJohnny=new ImageIcon("Casino//src//GamesUI/HorseRacing//Images//Johnny-Joestar-jojos-bizarre-adventure-40409230-353-576.png");
     ImageIcon winnerHotPants=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//Hot_Pants.png");
     ImageIcon winPic=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//unnamed.png");
-    ImageIcon lsoePic=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//unnamed.png");
+    ImageIcon losePic=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//unnamed.png");
    //
     public int winner=4;
     Random rnd=new Random();
@@ -47,9 +47,10 @@ public class RaceResults extends JFrame{
         this.contentPanel.setSize(1920,1040);
         this.contentPanel.add(HRResults);
         this.contentPanel.add(backgroundLabel);
+
     //Pic manipulations
 
-        switch(winner){
+        /*switch(winner){
             case 0:labelPic.setIcon(imageScale(winnerDiego,labelPic));
                 break;
             case 1: labelPic.setIcon(imageScale(winnerGyro,labelPic));
@@ -60,22 +61,38 @@ public class RaceResults extends JFrame{
                 break;
             default:labelPic.setText("Error");
 
-        }
-        backButton.addActionListener(new ActionListener() {
+        }*/
+
+
+        //
+            backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 hrResults.setVisible(false);
+                winner=rnd.nextInt(4);
                 horseRacingForm.displayHRFrame();
             }
         });
     }
     public void displayResultsFrame(){
-        this.winner=rnd.nextInt(3);
+        winnerChecker();
         hrResults.setContentPane(this.contentPanel);
         hrResults.setExtendedState(JFrame.MAXIMIZED_BOTH);
         hrResults.setResizable(false);
         // hrInfoFrame.setSize(400,400);
         hrResults.setVisible(true);
+    }
+    public void winnerChecker() {
+        this.winner=rnd.nextInt(4);
+        if (this.winner == 0) {
+            labelPic.setIcon(imageScale(winnerDiego, labelPic));
+        } else if (this.winner == 1) {
+            labelPic.setIcon(imageScale(winnerGyro, labelPic));
+        } else if (this.winner == 2) {
+            labelPic.setIcon(imageScale(winnerJohnny, labelPic));
+        } else if (this.winner == 3) {
+            labelPic.setIcon(imageScale(winnerHotPants, labelPic));
+        }
     }
     public ImageIcon imageScale(ImageIcon image,JLabel label){
         Image img=image.getImage();
