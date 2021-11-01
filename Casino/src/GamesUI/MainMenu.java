@@ -23,11 +23,11 @@ public class MainMenu {
     private JLabel userLabelMenu;
     private JButton refreshButton;
 
-    private UserProfile userProfileForm;
-    private HorseRacingUI horseRacingForm;
-    private FortuneWheelUI fortuneWheelForm;
-    private SlotMachineUI slotMachineForm;
-    private Game_4UI game_4Form;
+    private final UserProfile userProfileForm;
+    private final HorseRacingUI horseRacingForm;
+    private final FortuneWheelUI fortuneWheelForm;
+    private final SlotMachineUI slotMachineForm;
+    private final Game_4UI game_4Form;
 
     public MainMenu() {
         this.mainMenuJFrame = new JFrame("Main Frame");

@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Main {
     // UTILITIES
-    private MainMenu mainMenuFrame;
+    private final MainMenu mainMenuFrame;
 
     // CONSTRUCTOR
     public Main() {
@@ -19,8 +19,6 @@ public class Main {
 
         Main program = new Main();
         program.mainMenuFrame.displayMainFrame();
-
-
 
     }
 
