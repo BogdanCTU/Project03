@@ -39,6 +39,7 @@ public class HorseRacingUI{
     private JLabel horseChoseField;
     private JLabel horseNameField;
     private JFrame horseRacingFrame;
+    private RaceResults raceResults=new RaceResults(this);
     private HorseRacingInfo hsInfoFrame;
     private MainMenu mainMenuframe;
     private JPanel contentPanel;
@@ -61,7 +62,7 @@ public class HorseRacingUI{
         this.contentPanel.setSize(1920,1040);
         this.contentPanel.add(HRPanel);
         this.contentPanel.add(backgroundLabel);
-
+        this.horseChoseField.setText("");
         backMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -118,7 +119,8 @@ public class HorseRacingUI{
         startRaceButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                raceResults.displayResultsFrame();
+                horseRacingFrame.setVisible(false);
             }
         });
         bet50.addActionListener(new ActionListener() {
