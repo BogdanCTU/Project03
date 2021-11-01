@@ -18,7 +18,7 @@ public class HorseRacingUI{
     ImageIcon backGround=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//6tuy8e10bg251.jpg");
 
     public int winner=0;
-    protected int bChoise=0;
+    public int bChoise=4;
     protected int bet=0;
     Random rand=new Random();
     private JButton backMenuButton;
@@ -85,16 +85,13 @@ public class HorseRacingUI{
                 horseRacingFrame.setVisible(false);
             }
         });
-
-
-
         horse1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 labelPic.setIcon(imageScale(imageDiego,labelPic));
                 horseNameField.setText("Silver Bullet-Diego");
                 horseChoseField.setText("Horse chosen:Silver Bullet");
-                bChoise=1;
+                bChoise=0;
             }
         });
         horse2Button.addActionListener(new ActionListener() {
@@ -103,7 +100,7 @@ public class HorseRacingUI{
                 labelPic.setIcon(imageScale(imageGyro,labelPic));
                 horseNameField.setText("VALKYRIE-Gyro");
                 horseChoseField.setText("Horse chosen:VALKYRIE");
-                bChoise=2;
+                bChoise=1;
             }
         });
         horse3Button.addActionListener(new ActionListener() {
@@ -112,7 +109,7 @@ public class HorseRacingUI{
             labelPic.setIcon(imageScale(imageJohnny,labelPic));
                 horseNameField.setText("Slow Dancer-Johnny");
                 horseChoseField.setText("Horse chosen:Slow Dancer");
-                bChoise=3;
+                bChoise=2;
             }
         });
         horse4Button.addActionListener(new ActionListener() {
@@ -121,7 +118,7 @@ public class HorseRacingUI{
                 labelPic.setIcon(imageScale(imageHotPants,labelPic));
                 horseNameField.setText("Gets Up-Hot Pants");
                 horseChoseField.setText("Horse chosen:Gets Up");
-                bChoise=4;
+                bChoise=3;
             }
         });
         startRaceButton.addActionListener(new ActionListener() {
@@ -130,7 +127,7 @@ public class HorseRacingUI{
                 if(bet==0){
                     warnLabel.setText("Pls place a bet!");
                 }
-                else if(bChoise==0){
+                else if(bChoise==4){
                     warnLabel.setText("Pls choose an horse!");
                 }
                 else {
@@ -185,13 +182,16 @@ public class HorseRacingUI{
 
     public void resetFrame(){
 
-        this.bChoise=0;
+        this.bChoise=4;
         this.bet=0;
         this.labelPic.setIcon(null);
         this.horseNameField.setText(" ");
         this.yourBetField.setText("Your bet:0");
         this.horseChoseField.setText("Horse chosen:");
         //winnerRandomizer();
+    }
+    public int getChoice(){
+        return this.bChoise;
     }
     public void winnerRandomizer(int var){
     var=this.rand.nextInt(3);
