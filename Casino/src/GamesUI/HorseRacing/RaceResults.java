@@ -31,7 +31,7 @@ public class RaceResults extends JFrame{
     private JLabel backgroundLabel;
 
     public RaceResults(HorseRacingUI horseRacingForm) {
-        this.hrResults = new JFrame("Reulsts");
+        this.hrResults = new JFrame("Results");
         this.hrResults.setVisible(false);
         this.horseRacingForm = horseRacingForm;
 
@@ -74,24 +74,87 @@ public class RaceResults extends JFrame{
             }
         });
     }
-    public void displayResultsFrame(){
-        winnerChecker();
+    public void displayResultsFrame() {
+
         hrResults.setContentPane(this.contentPanel);
         hrResults.setExtendedState(JFrame.MAXIMIZED_BOTH);
         hrResults.setResizable(false);
         // hrInfoFrame.setSize(400,400);
         hrResults.setVisible(true);
+        winnerChecker();
+
     }
-    public void winnerChecker() {
+    /*public void winnerChecker(){
         this.winner=rnd.nextInt(4);
+
         if (this.winner == 0) {
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             labelPic.setIcon(imageScale(winnerDiego, labelPic));
+
         } else if (this.winner == 1) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             labelPic.setIcon(imageScale(winnerGyro, labelPic));
         } else if (this.winner == 2) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             labelPic.setIcon(imageScale(winnerJohnny, labelPic));
         } else if (this.winner == 3) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             labelPic.setIcon(imageScale(winnerHotPants, labelPic));
+        }
+    }*/
+    public void winnerChecker(){
+        this.winner=rnd.nextInt(4);
+
+        if (this.winner == 0) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            labelPic.setIcon(imageScale(winnerDiego, labelPic));
+            labelPic.setVisible(true);
+
+        } else if (this.winner == 1) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            labelPic.setIcon(imageScale(winnerGyro, labelPic));
+            labelPic.setVisible(true);
+        } else if (this.winner == 2) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            labelPic.setIcon(imageScale(winnerJohnny, labelPic));
+            labelPic.setVisible(true);
+        } else if (this.winner == 3) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            labelPic.setIcon(imageScale(winnerHotPants, labelPic));
+            labelPic.setVisible(true);
         }
     }
     public ImageIcon imageScale(ImageIcon image,JLabel label){
