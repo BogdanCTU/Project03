@@ -1,19 +1,46 @@
 package GamesUI.HorseRacing;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RaceResults extends JFrame{
+    ImageIcon backGround=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//6tuy8e10bg251.jpg");
+    ImageIcon winnerDiego=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//7fb26f33dcf0fc5e3e0bde56af81b56f.jpg");
+    ImageIcon winnerGyro=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//Gyro.jpg");
+    ImageIcon winnerJohnny=new ImageIcon("Casino//src//GamesUI/HorseRacing//Images//Johnny-Joestar-jojos-bizarre-adventure-40409230-353-576.png");
+    ImageIcon winnerHotPants=new ImageIcon("Casino//src//GamesUI//HorseRacing//Images//Hot_Pants.png");
+    ImageIcon winPic=new ImageIcon("Casino/src/GamesUI/HorseRacing/Images/unnamed.png");
+    ImageIcon lsoePic=new ImageIcon("Casino/src/GamesUI/HorseRacing/Images/unnamed.png");
     private JPanel HRResults;
     private JButton backButton;
+    private JLabel winnerAnnounce;
+    private JLabel labelPic;
+    private JLabel winLabel;
+    private JLabel lsoeLabel;
+    private JLabel winLabelPic;
+    private JLabel loseLabelPic;
     private HorseRacingUI horseRacingForm;
     private JFrame hrResults;
+    private JPanel contentPanel;
+    private JLabel backgroundLabel;
 
     public RaceResults(HorseRacingUI horseRacingForm) {
         this.hrResults = new JFrame("Reulsts");
         this.hrResults.setVisible(false);
         this.horseRacingForm = horseRacingForm;
+    //
+        this.HRResults.setSize(1920,1080);
+        this.HRResults.setOpaque(false);
+        this.backgroundLabel=new JLabel();
+        this.backgroundLabel.setIcon(backGround);
+        this.backgroundLabel.setSize(1920,1080);
+        this.contentPanel=new JPanel(null);
+        this.contentPanel.setSize(1920,1040);
+        this.contentPanel.add(HRResults);
+        this.contentPanel.add(backgroundLabel);
+    //Pic manipulations
 
         backButton.addActionListener(new ActionListener() {
             @Override
@@ -24,10 +51,16 @@ public class RaceResults extends JFrame{
         });
     }
     public void displayResultsFrame(){
-        hrResults.setContentPane(this.HRResults);
+        hrResults.setContentPane(this.contentPanel);
         hrResults.setExtendedState(JFrame.MAXIMIZED_BOTH);
         hrResults.setResizable(false);
         // hrInfoFrame.setSize(400,400);
         hrResults.setVisible(true);
+    }
+    public ImageIcon imageScale(ImageIcon image,JLabel label){
+        Image img=image.getImage();
+        Image imgScale=img.getScaledInstance(label.getWidth(),label.getHeight(),Image.SCALE_SMOOTH);
+        ImageIcon imgIcon=new ImageIcon(imgScale);
+        return imgIcon;
     }
 }
