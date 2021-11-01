@@ -131,6 +131,7 @@ public class SlotMachineUI {
             if (((line11rnd >= 31 && line11rnd <= 40) && (line12rnd >= 31 && line12rnd <= 40) && (line13rnd >= 31 && line13rnd <= 40)) || ((line21rnd >= 31 && line21rnd <= 40) && (line22rnd >= 31 && line22rnd <= 40) && (line23rnd >= 31 && line23rnd <= 40)) || ((line31rnd >= 31 && line31rnd <= 40) && (line32rnd >= 31 && line32rnd <= 40) && (line33rnd >= 31 && line33rnd <= 40))){
                 User.userMoney += 100;
             }
+            //a
 
         }
         else if (currentBet == 100){
