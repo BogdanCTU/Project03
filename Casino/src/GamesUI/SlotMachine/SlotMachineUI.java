@@ -71,6 +71,8 @@ public class SlotMachineUI {
         spinButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(User.casinoUser.getUserName() != null) userLabelSM.setText("User: " + User.casinoUser.getUserName() + " / Currency: " + User.userMoney);
+
                 line11rnd = rnd.nextInt(1,40);
                 line21rnd = rnd.nextInt(1,40);
                 line31rnd = rnd.nextInt(1,40);
@@ -98,7 +100,7 @@ public class SlotMachineUI {
 
 
 
-
+//a
     }
 
     // METHODS
@@ -108,7 +110,7 @@ public class SlotMachineUI {
         slotMachineFrame.setVisible(true);
     }
 
-
+    //a
     //path relativ pentru carti
     //cauta
 
