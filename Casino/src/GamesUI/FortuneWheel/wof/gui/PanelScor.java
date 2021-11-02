@@ -1,7 +1,8 @@
-package wof.gui;
+package GamesUI.FortuneWheel.wof.gui;
 
 import javax.swing.*;
-import wof.game.RoataNorocului;
+
+import GamesUI.FortuneWheel.wof.game.RoataNorocului;
 
 public class PanelScor extends JPanel {
 
@@ -21,8 +22,6 @@ public class PanelScor extends JPanel {
         scoreField.setBounds(50,150,45,45);
         turnsField = new JTextField("" + this.game.getTurnsLeft());
         turnsField.setEditable(true);
-
-
     }
 
     public void addScore(int score) {

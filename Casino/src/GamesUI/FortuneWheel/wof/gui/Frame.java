@@ -1,8 +1,8 @@
-package wof.gui;
+package GamesUI.FortuneWheel.wof.gui;
+
+import GamesUI.FortuneWheel.wof.game.RoataNorocului;
 
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
-import wof.game.RoataNorocului;
 
 public class Frame extends JFrame {
 
@@ -21,9 +21,9 @@ public class Frame extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
-
     }
 
+    /*
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(new Runnable() {
@@ -33,4 +33,5 @@ public class Frame extends JFrame {
             }
         });
     }
+    */
 }

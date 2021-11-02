@@ -1,5 +1,8 @@
 package GamesUI.FortuneWheel;
 
+import GamesUI.FortuneWheel.wof.game.RoataNorocului;
+import GamesUI.FortuneWheel.wof.gui.PanelRoata;
+import GamesUI.FortuneWheel.wof.gui.PanelScor;
 import GamesUI.MainMenu;
 import Utilities.User;
 
@@ -7,7 +10,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FortuneWheelUI {
+public class FortuneWheelUI extends JFrame{
     // UTILITIES
     private JButton backMenuButton;
     private JPanel FWPanel;
@@ -19,7 +22,16 @@ public class FortuneWheelUI {
     private MainMenu mainMenuframe;
 
     // CONSTRUCTOR
+
     public FortuneWheelUI(MainMenu mainMenuframe) {
+
+        //super();
+        //RoataNorocului game = new RoataNorocului();
+        //PanelScor scorPanel = new PanelScor(game);
+        //PanelRoata wheelPanel = new PanelRoata(game,scorPanel);
+        //add(scorPanel);
+        //add(wheelPanel);
+
         this.fortuneWheelFrame = new JFrame("User Frame");
         this.mainMenuframe = mainMenuframe;
 
@@ -39,20 +51,28 @@ public class FortuneWheelUI {
             }
         });
 
-        // COD IOANA
 
-
-
-
-        //SFARSIT COD IOANA
     }
 
     // METHODS
     public void displayFWFrame(){
+
         fortuneWheelFrame.setContentPane(this.FWPanel);
         fortuneWheelFrame.setSize(400,400);
         fortuneWheelFrame.setVisible(true);
     }
+
+
+    /*
+    public FortuneWheelUI(MainMenu mainMenuframe) {
+        super("Roata Norocului");
+        RoataNorocului game = new RoataNorocului();
+        PanelScor scorPanel = new PanelScor(game);
+        PanelRoata wheelPanel = new PanelRoata(game,scorPanel);
+        add(scorPanel);
+        add(wheelPanel);
+    }
+    */
 
     public JPanel getFWPanel() { return FWPanel; }
 

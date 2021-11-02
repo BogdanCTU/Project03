@@ -104,7 +104,6 @@ public class SlotMachineUI {
             public void actionPerformed(ActionEvent e) {
                 if(User.casinoUser.getUserName() != null) userLabelSM.setText("User: " + User.casinoUser.getUserName() + " / Currency: " + User.userMoney);
 
-
                     line11rnd = rnd.nextInt(1, 40);
                     line21rnd = rnd.nextInt(1, 40);
                     line31rnd = rnd.nextInt(1, 40);
@@ -125,15 +124,11 @@ public class SlotMachineUI {
                     line_3_2.setIcon(Deck.deck[line32rnd].GetImage());
                     line_3_3.setIcon(Deck.deck[line33rnd].GetImage());
 
-
                 slotMachine();
                 User.userMoney -= currentBet;
+                User.casinoUser.setUserMoeny(User.userMoney);
             }
         });
-
-
-
-//a
     }
 
     // METHODS
@@ -142,10 +137,6 @@ public class SlotMachineUI {
         slotMachineFrame.setSize(450,500);
         slotMachineFrame.setVisible(true);
     }
-
-    //a
-    //path relativ pentru carti
-    //cauta
 
     public void slotMachine(){
         if(currentBet == 50){

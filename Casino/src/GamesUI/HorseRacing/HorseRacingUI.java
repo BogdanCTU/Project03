@@ -3,6 +3,7 @@
 package GamesUI.HorseRacing;
 
 import GamesUI.MainMenu;
+import Utilities.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,7 +24,7 @@ public class HorseRacingUI{
     Random rand=new Random();
     private JButton backMenuButton;
     private JPanel HRPanel;
-    private JButton userImage;
+    private JButton userImageHR;
     private JLabel userLabel;
     private JButton horse2Button;
     private JButton hsInfoButton;
@@ -41,13 +42,15 @@ public class HorseRacingUI{
     private JLabel horseNameField;
     private JLabel warnLabel;
     private JButton refreshButton;
+    private JLabel userLabelHR;
     private JFrame horseRacingFrame;
     private RaceResults raceResults=new RaceResults(this);
     private HorseRacingInfo hsInfoFrame;
     private MainMenu mainMenuframe;
     private JPanel contentPanel;
     private JLabel backgroundLabel;
-    //sarutmana
+
+
     // CONSTRUCTOR
     public HorseRacingUI(MainMenu mainMenuframe) {
         this.horseRacingFrame = new JFrame("User Frame");
@@ -55,7 +58,7 @@ public class HorseRacingUI{
         this.hsInfoFrame=new HorseRacingInfo(this);
         this.labelPic.setSize(500,800);
         this.labelPic.setText("");
-       // this.labelPic.setIcon(imageScale(this.imageDiego,labelPic));
+        //this.labelPic.setIcon(imageScale(this.imageDiego,labelPic));
 
         this.HRPanel.setSize(1920,1080);
         this.HRPanel.setOpaque(false);
@@ -76,8 +79,6 @@ public class HorseRacingUI{
         });
 
         //cod silviu
-
-
         hsInfoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -85,6 +86,7 @@ public class HorseRacingUI{
                 horseRacingFrame.setVisible(false);
             }
         });
+
         horse1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -94,6 +96,7 @@ public class HorseRacingUI{
                 bChoise=0;
             }
         });
+
         horse2Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -103,6 +106,7 @@ public class HorseRacingUI{
                 bChoise=1;
             }
         });
+
         horse3Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,6 +116,7 @@ public class HorseRacingUI{
                 bChoise=2;
             }
         });
+
         horse4Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -121,9 +126,11 @@ public class HorseRacingUI{
                 bChoise=3;
             }
         });
+
         startRaceButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                User.userMoney -= bet;
                 if(bet==0){
                     warnLabel.setText("Pls place a bet!");
                 }
@@ -136,10 +143,10 @@ public class HorseRacingUI{
                     horseRacingFrame.setVisible(false);
                     warnLabel.setText("");
                     resetFrame();
-
                 }
-                }
+            }
         });
+
         bet50.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -147,6 +154,7 @@ public class HorseRacingUI{
             bet=50;
             }
         });
+
         bet100.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -154,6 +162,7 @@ public class HorseRacingUI{
                 bet=100;
             }
         });
+
         bet200.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -161,10 +170,12 @@ public class HorseRacingUI{
                 bet=200;
             }
         });
+
         refreshButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                resetFrame();
+                if(User.casinoUser.getUserName() != null) userLabelHR.setText("User: " + User.casinoUser.getUserName() + " / Currency: " + User.userMoney);
+                if(User.casinoUser.getUserIcon() != null) userImageHR.setIcon(User.casinoUser.getUserIcon());
             }
         });
     }
@@ -190,19 +201,21 @@ public class HorseRacingUI{
         this.horseChoseField.setText("Horse chosen:");
         //winnerRandomizer();
     }
+
     public int getChoice(){
         return this.bChoise;
     }
+
     public void winnerRandomizer(int var){
-    var=this.rand.nextInt(3);
+        var=this.rand.nextInt(3);
     }
+
     public ImageIcon imageScale(ImageIcon image,JLabel label){
       Image img=image.getImage();
       Image imgScale=img.getScaledInstance(label.getWidth(),label.getHeight(),Image.SCALE_SMOOTH);
       ImageIcon imgIcon=new ImageIcon(imgScale);
       return imgIcon;
     }
-    //cod silviu
 
     //EOF - end of file
 }

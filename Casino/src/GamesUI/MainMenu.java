@@ -1,6 +1,7 @@
 package GamesUI;
 
 import GamesUI.FortuneWheel.FortuneWheelUI;
+import GamesUI.FortuneWheel.wof.gui.Frame;
 import GamesUI.Game_4.Game_4UI;
 import GamesUI.HorseRacing.HorseRacingUI;
 import GamesUI.SlotMachine.SlotMachineUI;
@@ -58,6 +59,13 @@ public class MainMenu {
             public void actionPerformed(ActionEvent e) {
                 fortuneWheelForm.displayFWFrame();
                 mainMenuJFrame.setVisible(false);
+
+                //SwingUtilities.invokeLater(new Runnable() {
+                  //  @Override
+                  //  public void run() {
+                      //  new Frame();
+                  //  }
+                //});
             }
         });
 
