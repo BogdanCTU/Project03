@@ -1,4 +1,4 @@
-package wof.game;
+package GamesUI.FortuneWheel.wof.game;
 
 public class RoataNorocului {
 

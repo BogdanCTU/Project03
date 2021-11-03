@@ -1,10 +1,10 @@
-package wof.gui;
+package GamesUI.FortuneWheel.wof.gui;
 
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.*;
 
-import wof.game.RoataNorocului;
+import GamesUI.FortuneWheel.wof.game.RoataNorocului;
 
 public class Panel extends JPanel {
 

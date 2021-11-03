@@ -2,7 +2,8 @@ package wof.gui;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import wof.game.RoataNorocului;
+
+import GamesUI.FortuneWheel.wof.game.RoataNorocului;
 
 public class Frame extends JFrame {
 

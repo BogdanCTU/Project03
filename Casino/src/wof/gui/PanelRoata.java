@@ -1,5 +1,7 @@
 package wof.gui;
 
+import GamesUI.FortuneWheel.wof.game.RoataNorocului;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -20,37 +22,24 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
-import wof.game.RoataNorocului;
 
 public class PanelRoata extends JPanel {
-    private static final String IMAGES_DIR = "/resources/images/";
-
+    // UTILITIES
+    private static final String IMAGES_DIR = "Casino/src/GamesUI/FortuneWheel/image";
     private static final String[] IMAGE_NAMES;
-
     private static final Map<String, Color> WHEEL_COLORS;
-
     private static final int DEGREES_EACH = 20;
-
     private final Map<String, Image> IMAGES;
-
     private RoataNorocului game;
-
     private Timer wheelTimer;
-
     private ButtonListener buttonListener;
-
     private List<String> imageNames;
-
     private String spaceLanded;
-
     private JPanel lettersPanel;
-
     private JButton spinWheel;
-
     private JTextArea statusArea;
 
     static {
-//a
         IMAGE_NAMES =
                 new String[] {"300.png", "750.png", "500.png", "loseATurn.png",
                         "1000.png", "600.png", "350.png", "950.png", "800.png",
@@ -78,9 +67,8 @@ public class PanelRoata extends JPanel {
         WHEEL_COLORS.put("850", Color.CYAN);
     }
 
+    // CONSTRUCTOR
     public PanelRoata(RoataNorocului game){
-                   //   PanelScor scorPanel){
-
         super();
 
         Toolkit defaultToolkit = Toolkit.getDefaultToolkit();
@@ -93,12 +81,14 @@ public class PanelRoata extends JPanel {
                     defaultToolkit.getImage(getClass().getResource(
                             IMAGES_DIR + imageName)));
         }
-/*
+
+        /*
         IMAGES.put(
                 "arrow.png",
                 defaultToolkit.getImage(getClass().getResource(
                         IMAGES_DIR + "arrow.png")));
-*/
+        */
+
         //rotire
         wheelTimer = new Timer(25, new ActionListener() {
             @Override
@@ -111,7 +101,6 @@ public class PanelRoata extends JPanel {
             }
         });
 
-
         buttonListener = new ButtonListener();
 
         lettersPanel = new JPanel();
@@ -120,8 +109,6 @@ public class PanelRoata extends JPanel {
 
         spinWheel = new JButton("Spin Wheel");
         spinWheel.addActionListener(buttonListener);
-
-
 
         statusArea = new JTextArea();
         statusArea.setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -158,8 +145,7 @@ public class PanelRoata extends JPanel {
         newGame();
     }
 
-
-
+    // METHODS
     public void newGame() {
         statusArea.setText("Bun venit la Roata Norocului\n"
                 + "Tu poti incepe sa rotesti ");
@@ -204,8 +190,6 @@ public class PanelRoata extends JPanel {
         g.drawImage(IMAGES.get("arrow.png"), 370, 10, this);
     }
 
-
-
     private class ButtonListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -226,9 +210,7 @@ public class PanelRoata extends JPanel {
                     spaceLanded = imageNames.get(4);
                 }
             }
-
-            }
-
         }
     }
+}
 
