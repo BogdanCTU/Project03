@@ -1,8 +1,10 @@
 package GamesUI.FortuneWheel;
 
 import GamesUI.FortuneWheel.wof.game.RoataNorocului;
+import GamesUI.FortuneWheel.wof.gui.Frame;
 import GamesUI.FortuneWheel.wof.gui.PanelRoata;
 import GamesUI.FortuneWheel.wof.gui.PanelScor;
+import GamesUI.Game_4.DiceGame.RollDicePanel;
 import GamesUI.MainMenu;
 import Utilities.User;
 
@@ -17,6 +19,7 @@ public class FortuneWheelUI extends JFrame{
     private JButton UserImageFW;
     private JLabel UserLabelFW;
     private JButton refreshButton;
+    private JButton playGameButton;
     private JFrame fortuneWheelFrame;
 
     private MainMenu mainMenuframe;
@@ -51,6 +54,19 @@ public class FortuneWheelUI extends JFrame{
             }
         });
 
+        playGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //mainMenuJFrame.setVisible(false);     //TODO need back button
+
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new Frame();
+                    }
+                });
+            }
+        });
 
     }
 
