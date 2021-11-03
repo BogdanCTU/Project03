@@ -174,6 +174,7 @@ public class HorseRacingUI{
         refreshButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                User.userMoney-=bet;
                 if(User.casinoUser.getUserName() != null) userLabelHR.setText("User: " + User.casinoUser.getUserName() + " / Currency: " + User.userMoney);
                 if(User.casinoUser.getUserIcon() != null) userImageHR.setIcon(User.casinoUser.getUserIcon());
             }

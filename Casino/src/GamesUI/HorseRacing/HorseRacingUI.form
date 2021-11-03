@@ -155,6 +155,7 @@
         <properties>
           <font name="Blackadder ITC" size="20"/>
           <text value="Horse Race Info"/>
+          <visible value="false"/>
         </properties>
       </component>
       <component id="32222" class="javax.swing.JButton" binding="bet50">
@@ -253,9 +254,12 @@
           <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <autoscrolls value="false"/>
           <background color="-6315109"/>
           <focusable value="true"/>
-          <text value="Label"/>
+          <foreground color="-262154"/>
+          <inheritsPopupMenu value="false"/>
+          <text value="  "/>
         </properties>
       </component>
     </children>

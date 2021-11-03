@@ -1,5 +1,7 @@
 package GamesUI.HorseRacing;
 
+import Utilities.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -74,6 +76,7 @@ public class RaceResults extends JFrame{
                 hrResults.setVisible(false);
                 winner=rnd.nextInt(4);
                 horseRacingForm.displayHRFrame();
+                horseRacingForm.resetFrame();
             }
         });
     }
@@ -143,21 +146,25 @@ public class RaceResults extends JFrame{
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
+            User.userMoney+=horseRacingForm.bet;
         }
         else if (this.horseRacingForm.getChoice()==this.winner) {
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
+            User.userMoney+=horseRacingForm.bet;
         }
         else if (this.horseRacingForm.getChoice()==this.winner) {
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
+            User.userMoney+=horseRacingForm.bet;
         }
         else if (this.horseRacingForm.getChoice()==this.winner) {
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
+            User.userMoney+=horseRacingForm.bet;
         }
         else{
             this.loseLabel.setVisible(true);
