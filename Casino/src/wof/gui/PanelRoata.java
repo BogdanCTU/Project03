@@ -50,7 +50,7 @@ public class PanelRoata extends JPanel {
     private JTextArea statusArea;
 
     static {
-
+//a
         IMAGE_NAMES =
                 new String[] {"300.png", "750.png", "500.png", "loseATurn.png",
                         "1000.png", "600.png", "350.png", "950.png", "800.png",
