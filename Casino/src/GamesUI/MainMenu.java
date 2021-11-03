@@ -2,6 +2,7 @@ package GamesUI;
 
 import GamesUI.FortuneWheel.FortuneWheelUI;
 import GamesUI.FortuneWheel.wof.gui.Frame;
+import GamesUI.Game_4.DiceGame.RollDicePanel;
 import GamesUI.Game_4.Game_4UI;
 import GamesUI.HorseRacing.HorseRacingUI;
 import GamesUI.SlotMachine.SlotMachineUI;
@@ -78,11 +79,17 @@ public class MainMenu {
         });
 
         game4Button.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 game_4Form.displayG4Frame();
                 mainMenuJFrame.setVisible(false);
             }
+
+
+
+
+
         });
 
         refreshButton.addActionListener(new ActionListener() {

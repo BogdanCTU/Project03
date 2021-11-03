@@ -1,5 +1,6 @@
 package GamesUI.Game_4;
 
+import GamesUI.Game_4.DiceGame.RollDicePanel;
 import GamesUI.MainMenu;
 import Utilities.User;
 
@@ -14,6 +15,7 @@ public class Game_4UI {
     private JButton UserImageG4;
     private JButton refreshButton;
     private JLabel UserLabelG4;
+    private JButton playGameButton;
 
     private MainMenu mainMenuframe;
     private JFrame game_4Frame;
@@ -39,6 +41,19 @@ public class Game_4UI {
             }
         });
 
+        playGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //mainMenuJFrame.setVisible(false);     //TODO need back button
+
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new RollDicePanel();
+                    }
+                });
+            }
+        });
 
 
 

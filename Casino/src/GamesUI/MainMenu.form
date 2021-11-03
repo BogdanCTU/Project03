@@ -36,7 +36,8 @@
               </grid>
             </constraints>
             <properties>
-              <text value="Horse Racing"/>
+              <icon value="GamesImages/horseGameIcon.png"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="e052b" class="javax.swing.JButton" binding="game2Button">
@@ -47,7 +48,8 @@
               </grid>
             </constraints>
             <properties>
-              <text value="Fortune Wheel"/>
+              <icon value="GamesImages/fortuneWheelGameIcon.png"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="d8d34" class="javax.swing.JButton" binding="game4Button" default-binding="true">
@@ -58,7 +60,8 @@
               </grid>
             </constraints>
             <properties>
-              <text value="Game4"/>
+              <icon value="GamesImages/diceGameIcon.png"/>
+              <text value=""/>
             </properties>
           </component>
         </children>
