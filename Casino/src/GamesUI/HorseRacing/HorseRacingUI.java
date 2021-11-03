@@ -42,7 +42,7 @@ public class HorseRacingUI{
     private JLabel horseNameField;
     private JLabel warnLabel;
     private JButton refreshButton;
-    private JLabel userLabelHR;
+    protected JLabel userLabelHR;
     private JFrame horseRacingFrame;
     private RaceResults raceResults=new RaceResults(this);
     private HorseRacingInfo hsInfoFrame;

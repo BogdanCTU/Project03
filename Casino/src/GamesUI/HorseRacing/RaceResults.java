@@ -77,6 +77,7 @@ public class RaceResults extends JFrame{
                 winner=rnd.nextInt(4);
                 horseRacingForm.displayHRFrame();
                 horseRacingForm.resetFrame();
+                horseRacingForm.userLabelHR.setText("User: " + User.casinoUser.getUserName() + " / Currency: " + User.userMoney);
             }
         });
     }
@@ -146,25 +147,25 @@ public class RaceResults extends JFrame{
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
-            User.userMoney+=horseRacingForm.bet;
+            User.userMoney+=horseRacingForm.bet*4;
         }
         else if (this.horseRacingForm.getChoice()==this.winner) {
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
-            User.userMoney+=horseRacingForm.bet;
+            User.userMoney+=horseRacingForm.bet*4;
         }
         else if (this.horseRacingForm.getChoice()==this.winner) {
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
-            User.userMoney+=horseRacingForm.bet;
+            User.userMoney+=horseRacingForm.bet*4;
         }
         else if (this.horseRacingForm.getChoice()==this.winner) {
             this.winLabelPic.setVisible(true);
             this.winLabelPic.setIcon(imageScale(losePic, winLabelPic));
             this.winLabel.setVisible(true);
-            User.userMoney+=horseRacingForm.bet;
+            User.userMoney+=horseRacingForm.bet*4;
         }
         else{
             this.loseLabel.setVisible(true);
