@@ -1,16 +1,16 @@
-package GamesUI.FortuneWheel.wof.gui;
-
-import GamesUI.FortuneWheel.wof.game.RoataNorocului;
+package wof.gui;
 
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.*;
 
+import wof.game.RoataNorocului;
+
 public class Panel extends JPanel {
 
-    private static final int SQUARE_WIDTH = 35, SQUARE_HEIGHT = 45,
-            SPACE_WIDTH = 2, PUZZLE_WIDTH = 12 * SQUARE_WIDTH,
-            PUZZLE_HEIGHT = 4 * SQUARE_HEIGHT;
+
+    private static final int SQUARE_WIDTH = 35, SQUARE_HEIGHT = 45;
+
 
     private RoataNorocului game;
     private JLabel categoryLabel;

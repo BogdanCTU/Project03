@@ -1,8 +1,8 @@
-package GamesUI.FortuneWheel.wof.gui;
-
-import GamesUI.FortuneWheel.wof.game.RoataNorocului;
+package wof.gui;
 
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import wof.game.RoataNorocului;
 
 public class Frame extends JFrame {
 
@@ -10,10 +10,10 @@ public class Frame extends JFrame {
         super("Roata Norocului");
 
         RoataNorocului game = new RoataNorocului();
-        PanelScor scorPanel = new PanelScor(game);
-        PanelRoata wheelPanel = new PanelRoata(game,scorPanel);
+        //PanelScor scorPanel = new PanelScor(game);
+        wof.gui.PanelRoata wheelPanel = new wof.gui.PanelRoata(game);
 
-        add(scorPanel);
+        //add(scorPanel);
         add(wheelPanel);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -21,9 +21,9 @@ public class Frame extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
+
     }
 
-    /*
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(new Runnable() {
@@ -33,5 +33,4 @@ public class Frame extends JFrame {
             }
         });
     }
-    */
 }

@@ -1,4 +1,4 @@
-package GamesUI.FortuneWheel.wof.gui;
+package wof.gui;
 
 public class adaugareBani{
     private bani card;

@@ -1,12 +1,9 @@
 package GamesUI.FortuneWheel;
 
-import GamesUI.FortuneWheel.wof.game.RoataNorocului;
-import GamesUI.FortuneWheel.wof.gui.Frame;
-import GamesUI.FortuneWheel.wof.gui.PanelRoata;
-import GamesUI.FortuneWheel.wof.gui.PanelScor;
-import GamesUI.Game_4.DiceGame.RollDicePanel;
+
 import GamesUI.MainMenu;
 import Utilities.User;
+//import GamesUI.FortuneWheel.wof.gui.PanelScor;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -62,7 +59,7 @@ public class FortuneWheelUI extends JFrame{
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        new Frame();
+                        new wof.gui.Frame();
                     }
                 });
             }
