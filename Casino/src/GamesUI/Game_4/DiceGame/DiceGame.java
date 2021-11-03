@@ -293,7 +293,7 @@ class Square3 extends BoardSquare {
 class Square4 extends BoardSquare {
 
     public Square4() {
-        super("Lost All", 4, new Color(252, 48, 99), Color.WHITE);
+        super("Reset Score", 4, new Color(252, 48, 99), Color.WHITE);
     }
 
     @Override
